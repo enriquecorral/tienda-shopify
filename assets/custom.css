@@ -1,0 +1,30 @@
+.hero {
+  background-image: url('./hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 1440px;
+  height: 785px;
+  margin: 0 0 4px;
+  padding: 25px 94px 276px 36px;
+  object-fit: contain;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.hero__content h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero__content span {
+  color: #84a102; 
+}
+
+.hero__button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}

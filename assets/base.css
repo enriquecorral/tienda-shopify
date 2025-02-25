@@ -3595,34 +3595,3 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
-
-.hero {
-  background-image: url('{{ "hero-image.jpg" | asset_url }}');
-  background-size: cover;
-  background-position: center;
-  height: 785px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.hero__content h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.hero__content span {
-  color: #84a102; /* Verde del diseño */
-}
-
-.hero__button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
