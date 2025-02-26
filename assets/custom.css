@@ -200,12 +200,12 @@ img.Fill-2 {
 
   .hero__content h1 {
     font-size: 28px;
-    margin: 50px auto;
+    margin: 50px 26%;
   }
 
   .hero__button {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     font-size: 12px;
   }
 
