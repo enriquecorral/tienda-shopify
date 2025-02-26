@@ -123,3 +123,100 @@ img.Fill-2 {
   height: 811px;
   border: solid 1px #fff;
 }
+
+@media (max-width: 1200px) {
+  .hero {
+    padding: 25px 5%;
+  }
+
+  .hero__content h1 {
+    width: 80%;
+    margin: 100px 15%;
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    padding-bottom: 150px;
+  }
+
+  .hero__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu__container {
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+  }
+
+  .hero__content h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .hero__button {
+    display: block;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__content h1 {
+    font-size: 35px;
+    width: 70%;
+    margin: 80px 20%;
+  }
+
+  .hero__button {
+    width: 100%;
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .hero__header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu__container {
+    font-size: 14px;
+  }
+
+  .hero__content h1 {
+    font-size: 28px;
+    margin: 50px auto;
+  }
+
+  .hero__button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 12px;
+  }
+
+  img.Fill-2 {
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .line {
+    left: 80px;
+  }
+}
