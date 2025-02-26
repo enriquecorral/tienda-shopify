@@ -1,8 +1,8 @@
 .hero {
-  background-image: url('./hero-image.jpg');
+  background-image: url("./hero-image.jpg");
   background-size: cover;
   background-position: center;
-  width: 1440px;
+  width: 100%;
   height: 785px;
   margin: 0 0 4px;
   padding: 25px 94px 276px 36px;
@@ -11,20 +11,115 @@
 }
 
 .hero__content h1 {
-  font-size: 48px;
-  font-weight: bold;
+  width: 709px;
+  height: 257px;
+  margin: 130px 402px 27px 136px;
+  font-family: HelveticaNeue;
+  font-size: 53px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.28;
+  letter-spacing: -0.05px;
+  color: #fff;
+  align-content: center;
+  position: relative;
 }
 
 .hero__content span {
-  color: #84a102; 
+  color: #cbe346;
 }
 
 .hero__button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+  width: 269px;
+  height: 53px;
+  padding: 15px 30px 15px 36px;
+  border-radius: 26.5px;
+  border: solid 1px #fff;
+  background-color: transparent;
+}
+
+.hero__button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 23px;
+  margin: 0;
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.15;
+  letter-spacing: 1.01px;
+  color: #fff;
+}
+
+.hero__header {
+  display: flex;
+  height: 37px;
+  margin: 19px 0px 144px 137px;
+}
+
+.menu__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 579px;
+  height: 37px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  color: #fff;
+  padding-right: 48px;
+}
+.menu__container .text-style-1 {
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+
+.es-en__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 62px;
+  height: 37px;
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.14px;
+  color: #fff;
+  margin-left: auto;
+}
+.es-en__container .text-style-1 {
+  font-weight: normal;
+}
+
+img.Fill-2 {
+  margin: 0;
+  position: absolute;
+  object-fit: contain;
+  top: 25px;
+  left: 36px;
+}
+
+.line {
+  display: block !important;
+  position: absolute;
+  top: 0px;
+  left: 105px;
+  width: 1px;
+  height: 811px;
+  border: solid 1px #fff;
 }
