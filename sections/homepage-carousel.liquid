@@ -1,0 +1,115 @@
+{% schema %}
+  {
+    "name": "Homepage Carousel",
+    "settings": []
+  }
+{% endschema %}
+
+<section class="raquetas-section">
+  <div class="img-background">
+    <div class="img-container">
+      <span class="title">
+        Nuestras
+        <span class="text-style-1">Raquetas</span>
+      </span>
+      <span class="description">
+        Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.
+      </span>
+      <div class="arrows-container">
+        <div class="arrow-left">
+          <span>&#9664;</span>
+        </div>
+        <img
+          src="{{ 'group-copy-2.svg' | asset_url }}"
+          width="72px"
+          height="72px"
+          class="arrow-right">
+      </div>
+    </div>
+  </div>
+{% comment %} <div class="raquetas-slider">
+      <button class="raquetas-prev">‹</button>
+      <div class="raquetas-container">
+        {% for product in collections[section.settings.collection].products limit: section.settings.products_to_show %}
+          <div class="raquetas-item">
+            <a href="{{ product.url }}">
+              <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+              <h3>{{ product.title }}</h3>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <button class="raquetas-next">›</button>
+  </div> {% endcomment %}
+</section>
+
+
+<style>
+  .raquetas-section {
+    width: 100%;
+    height: 468px;
+  }
+  .img-background {
+    background-image: url("../assets/ball-color-court-1405355.jpg");
+    height: 468px;
+    width: 530px;
+    margin-left: 3px;
+  }
+  .img-container {
+    width: 303px;
+    height: 100%;
+    margin-right: 27px;
+    margin-left: 200px;
+  }
+  .img-container .title {
+    display: inline-block;
+    align-content: center;
+    width: 259px;
+    height: 151px;
+    margin: 38px 44px 0 10px;
+    font-family: HelveticaNeue;
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.28;
+    letter-spacing: -0.06px;
+    color: #fff;
+  }
+  .img-container .title .text-style-1 {
+    font-weight: bold;
+  }
+  .img-container .description {
+    display: inline-block;
+    width: 303px;
+    height: 122px;
+    margin: 8px 0 14px 10px;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 0.51px;
+    color: #fff;
+  }
+  .arrows-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .arrow-left {
+    width: 54px;
+    height: 54px;
+    margin: 5px 14px 0 -10px;
+    padding-top: 12px;
+    padding-left: 17px;
+    border-radius: 30px;
+    border: solid 1px #fff;
+  }
+  .arrow-left span {
+    color: #fff;
+    font-size: 13px;
+  }
+
+</style>
