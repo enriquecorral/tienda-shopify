@@ -169,6 +169,10 @@ img.Fill-2 {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .line {
+    height: 730px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -181,6 +185,10 @@ img.Fill-2 {
   .hero__button {
     width: 100%;
     max-width: 230px;
+  }
+
+  .line {
+    height: 720px;
   }
 }
 
