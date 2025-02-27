@@ -1,6 +1,7 @@
 {
   "sections": {
     "hero": { "type": "homepage-hero", "settings": {} },
+    "history": { "type": "homepage-history", "settings": {} },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -66,5 +67,5 @@
       }
     }
   },
-  "order": ["hero", "image_banner", "featured_collection"]
+  "order": ["hero", "history", "image_banner", "featured_collection"]
 }
