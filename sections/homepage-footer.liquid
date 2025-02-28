@@ -1,0 +1,95 @@
+{% schema %}
+  {
+    "name": "Homepage Footer",
+    "settings": []
+  }
+{% endschema %}
+
+<div class="footer-background">
+  <ul class="menu-container">
+    <li class="menu-item strong">Inicio</li>
+    <li class="menu-item">Acerca de nosotros</li>
+    <li class="menu-item">Historia</li>
+    <li class="menu-item">Contacto</li>
+  </ul>
+  <section class="social-networks">
+    <img
+      src="{{ 'group-23.svg' | asset_url }}"
+      height="31px"
+      width="31px"
+      class="icon">
+    <img
+      src="{{ 'group-24.svg' | asset_url }}"
+      height="31px"
+      width="31px"
+      class="icon">
+    <img
+      src="{{ 'group-25.svg' | asset_url }}"
+      height="31px"
+      width="31px"
+      class="icon">
+    <img
+      src="{{ 'group-22.svg' | asset_url }}"
+      height="31px"
+      width="31px"
+      class="icon">
+    <img
+      src="{{ 'group-26.svg' | asset_url }}"
+      height="31px"
+      width="31px"
+      class="icon">
+  </section>
+  <img
+    src="{{ 'fill-2.svg' | asset_url }}"
+    width="55px"
+    height="55px"
+    class="ball">
+</div>
+
+<style>
+  .footer-background {
+    height: 203px;
+    width: 100%;
+    padding: 64px 63px 58px 78px;
+    background-color: #cbe346;
+    position: relative;
+  }
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 451px;
+    height: 37px;
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.14px;
+    color: #2b3049;
+    padding: 0 30px 0 0;
+    margin: 0 0 13px;
+  }
+  .menu-container .menu-item {
+    list-style-type: none;
+  }
+  .menu-container .menu-item.strong {
+    font-weight: bold;
+  }
+  .ball {
+    position: absolute;
+    right: 63px;
+    top: 77px;
+  }
+  .social-networks {
+    display: flex;
+    gap: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .ball {
+      display: none;
+    }
+  }
+</style>
