@@ -15,6 +15,11 @@
       <span class="description">
         Conoce nuestras raquetas y aprende a jugar Tennis como un profesional.
       </span>
+      <div class="carousel-indicators">
+        {% for product in collections['raquetas'].products %}
+          <span class="indicator {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></span>
+        {% endfor %}
+      </div>
       <div class="arrows-container">
         <button class="arrow-left" onclick="prevSlide()">
           <span>&#9664;</span>
@@ -32,6 +37,7 @@
     <ul class="carousel">
       {% for product in collections['raquetas'].products %}
         <li class="carousel-item">
+          <span class="item-index">{{ forloop.index }}</span>
           <img
             src="{{ product.featured_image | img_url: 'medium' }}"
             width="288px"
@@ -50,8 +56,12 @@
   function updateCarousel() {
     const carousel = document.querySelector('.carousel');
     if (carousel) {
-      carousel.style.transform = `translateX(-${currentIndex * 24}%)`;
+      carousel.style.transform = `translateX(-${currentIndex * 37}%)`;
     }
+
+    document.querySelectorAll('.indicator').forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
   }
 
   function nextSlide() {
@@ -112,8 +122,8 @@
   .img-container .description {
     display: inline-block;
     width: 303px;
-    height: 122px;
-    margin: 8px 0 14px 10px;
+    height: 100px;
+    margin: 8px 0 -1px 10px;
     font-family: HelveticaNeue;
     font-size: 18px;
     font-weight: normal;
@@ -127,13 +137,14 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
+    margin-left: 3px;
   }
   .arrow-left {
     width: 54px;
     height: 54px;
     margin: 5px 14px 0 -10px;
-    padding-top: 6px;
-    padding-left: 6px;
+    padding-top: 4px;
+    padding-left: 5px;
     border-radius: 30px;
     border: solid 1px #fff;
     background-color: transparent;
@@ -170,6 +181,43 @@
     list-style-type: none;
     margin-left: 18px;
     margin-right: 18px;
+    position: relative;
   }
-
+  .item-index {
+    position: absolute;
+    left: 17px;
+    top: 11px;
+    background-color: #cbe346;
+    width: 39px;
+    height: 39px;
+    border-radius: 20px;
+    font-family: HelveticaNeue;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.76;
+    letter-spacing: 2.11px;
+    text-align: center;
+    color: #fff;
+    padding-top: 4px;
+    padding-left: 2px;
+  }
+  .carousel-indicators {
+    display: inline-flex;
+    justify-content: center;
+    gap: 23px;
+    margin-bottom: 35px;
+    margin-left: 9px;
+  }
+  .indicator {
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .indicator.active {
+    background-color: #cbe346;
+  }
 </style>
