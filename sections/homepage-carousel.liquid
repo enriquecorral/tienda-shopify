@@ -5,49 +5,54 @@
   }
 {% endschema %}
 
-<section class="raquetas-section">
-  <div class="img-background">
-    <div class="img-container">
-      <span class="title">
-        Nuestras
-        <span class="text-style-1">Raquetas</span>
-      </span>
-      <span class="description">
-        Conoce nuestras raquetas y aprende a jugar Tennis como un profesional.
-      </span>
-      <div class="carousel-indicators">
-        {% for product in collections['raquetas'].products %}
-          <span class="indicator {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></span>
-        {% endfor %}
-      </div>
-      <div class="arrows-container">
-        <button class="arrow-left" onclick="prevSlide()">
-          <span>&#9664;</span>
-        </button>
-        <button class="arrow-right" onclick="nextSlide()">
-          <img
-            src="{{ 'group-copy-2.svg' | asset_url }}"
-            width="72px"
-            height="72px">
-        </button>
+<div>
+  <section class="raquetas-section">
+    <div class="img-background">
+      <div class="img-container">
+        <span class="title">
+          Nuestras
+          <span class="text-style-1">Raquetas</span>
+        </span>
+        <span class="description">
+          Conoce nuestras raquetas y aprende a jugar Tennis como un profesional.
+        </span>
+        <div class="carousel-indicators">
+          {% for product in collections['raquetas'].products %}
+            <span class="indicator {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}"></span>
+          {% endfor %}
+        </div>
+        <div class="arrows-container">
+          <button class="arrow-left" onclick="prevSlide()">
+            <span>&#9664;</span>
+          </button>
+          <button class="arrow-right" onclick="nextSlide()">
+            <img
+              src="{{ 'group-copy-2.svg' | asset_url }}"
+              width="72px"
+              height="72px">
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="carousel-container">
-    <ul class="carousel">
-      {% for product in collections['raquetas'].products %}
-        <li class="carousel-item">
-          <span class="item-index">{{ forloop.index }}</span>
-          <img
-            src="{{ product.featured_image | img_url: 'medium' }}"
-            width="288px"
-            height="344px"
-            alt="{{ product.title }}">
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+    <div class="carousel-container">
+      <ul class="carousel">
+        {% for product in collections['raquetas'].products %}
+          <li class="carousel-item">
+            <span class="item-index">{{ forloop.index }}</span>
+            <img
+              src="{{ product.featured_image | img_url: 'medium' }}"
+              width="288px"
+              height="344px"
+              alt="{{ product.title }}">
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <section class="banner-section">
+    <img src="{{ 'action-athlete-ball-342361.jpg' | asset_url }}" alt="Partido de Tennis">
+  </section>
+</div>
 
 <script>
   let currentIndex = 0;
@@ -220,4 +225,40 @@
   .indicator.active {
     background-color: #cbe346;
   }
+  .banner-section img {
+    width: 100%;
+    max-height: 586px;
+  }
+
+  @media (max-width: 1200px) {
+    .img-container {
+      margin-left: 20%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .raquetas-section {
+      display: inline;
+    }
+    .img-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+    }
+    .img-background {
+      background-image: url("../assets/ball-color-court-1405355.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 468px;
+      width: 100%;
+      margin-left: 0;
+    }
+    .img-container .title {
+      width: 100%;
+    }
+    .img-container .description {
+      width: 100%;
+    }
+  }
+
 </style>
